@@ -1,0 +1,40 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Lleve caserito:</h5>
+          <p class="category">Platos
+          </p>
+        </div>
+        <div class="row">
+          <div class="card col-md-4" *ngFor="let rest of empresas">
+            <div class="card-header">
+              <h4> {{rest.nomEmpresa}}</h4>
+            </div>
+            <div class="card-body">
+              <img style="display:block; margin:auto" [src]="rest.imagen">
+              <br>
+              {{rest.direccion}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <dov class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        Box header
+      </div>
+      <div class="card-body">
+        Body
+      </div>
+    </div>
+  </dov>
+</div>
