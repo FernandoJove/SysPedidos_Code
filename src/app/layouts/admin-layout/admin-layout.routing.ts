@@ -7,13 +7,17 @@ import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
 
 import { NotificationsComponent } from '../../notifications/notifications.component';
+import { UsersComponent } from '../../users/users.component';
+import { PagosComponent } from '../../pagos/pagos.component';
 
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
+    { path: '',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'notifications',  component: NotificationsComponent }
+    { path: 'carrito',          component: IconsComponent },
+    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'users',          component: UsersComponent},
+    { path: 'pagos',          component: PagosComponent},
 ];

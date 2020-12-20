@@ -13,9 +13,9 @@ export class MenuService {
   constructor(private http:HttpClient){
 
   }
-  getMenuByEmpresa(id:number){
+  getMenuByEmpresa(idEmpresa:number){
     
-    return this.http.get<any>(this.urlmenu+id, {headers:this.htpHeaders});
+    return this.http.get<any>(this.urlmenu+idEmpresa, {headers:this.htpHeaders});
   }
 
   listMenus(){

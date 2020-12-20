@@ -12,6 +12,8 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrModule } from 'ngx-toastr';
+import { PagosComponent } from '../../pagos/pagos.component';
+import { DetailsComponent } from '../../shared/details/details.component';
 
 @NgModule({
   imports: [
@@ -29,6 +31,8 @@ import { ToastrModule } from 'ngx-toastr';
     TypographyComponent,
     IconsComponent,
     NotificationsComponent,
+    PagosComponent,
+    DetailsComponent
   ]
 })
 

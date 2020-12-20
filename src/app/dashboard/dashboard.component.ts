@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   
  
   restaurantes:any;
-  menu:any;
+  menu:any; 
   constructor(private _EmpresasService:EmpresaService, private _MenuService:MenuService) { }
 
   ngOnInit() {
