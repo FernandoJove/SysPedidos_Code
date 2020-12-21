@@ -16,22 +16,22 @@
 
     <div class="login__main">        
         <div class="login__title">
-            <p>welcome</p>
-            <h3>Fill the form to become part of team</h3>
+            <p>welcome - Login</p>
+            <h3>Systema de Pedidos </h3>
         </div>
         <div class="login__forms">
-          <form>
+          <form [formGroup] ="loginForm">
 
-            <div class="">
-                <input class="login-input" type="text" placeholder="Email">            
+            <div>
+                <input class="login-input" formControlName="username" type="text" placeholder="Username">            
             </div>
 
-            <div class="">
-                <input class="login-input" type="password" placeholder="Password">            
+            <div>
+                <input class="login-input" formControlName="password" type="password" placeholder="Password">            
             </div>
 
             <div>            
-              <button class="btn btn-go" routerLink="/dashboard">
+              <button class="btn btn-go" (click)="login()" >
                 Go  <img src="../assets/img/arrow-right.svg" alt="">
               </button>
             </div>
