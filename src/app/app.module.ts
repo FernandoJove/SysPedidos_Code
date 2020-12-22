@@ -25,7 +25,9 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    
+
   ],
   declarations: [
     AppComponent,

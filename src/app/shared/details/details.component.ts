@@ -15,7 +15,7 @@ export class DetailsComponent implements OnInit {
   constructor(private _carritoService :CarritoService) { }
 
   ngOnInit() {
-    console.log("INIT DETAILS COMPONENT")
+  
   }
 
 

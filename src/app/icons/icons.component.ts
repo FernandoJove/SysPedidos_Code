@@ -44,14 +44,10 @@ export class IconsComponent implements OnInit {
   savePlato(plato){
 
     console.log(plato);
-    
-    // let obj = this.menu
-    // let plato = {cantidad:this.count}
-    // console.log(plato);
-    // console.log(obj)
+ 
     let newPlato = {...plato,cantidad:this.count}
     this.carritoService.addLocalStorage(newPlato)
-    console.log("sOY EL MENU QUE ESTA ENVIANDO"+ JSON.stringify(this.menu))
+    console.log("SOY EL MENU QUE ESTA ENVIANDO"+ JSON.stringify(this.menu))
     this.count = 0
   }
 

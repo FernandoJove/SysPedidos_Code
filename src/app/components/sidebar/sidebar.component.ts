@@ -18,6 +18,16 @@ export const ROUTES: RouteInfo[] = [
 
 ];
 
+
+
+export const ROUTESUSER: RouteInfo[] = [
+    { path: '/dashboard', title: 'Dashboard',  icon: 'design_app', class: '' },
+    { path: '/dashboard/carrito', title: 'Carta',  icon:'shopping_bag-16', class: '' },
+    { path: '/dashboard/user-profile', title: 'User Profile',  icon:'users_single-02', class: '' },
+    { path: '/dashboard/pagos', title : 'Pagos' , icon : 'education_paper', class: ''}
+
+];
+
 @Component({ 
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -25,11 +35,12 @@ export const ROUTES: RouteInfo[] = [
 })
 export class SidebarComponent implements OnInit {
   menuItems: any[];
+  public menu:any;
 
   constructor() { }
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+    this.rutas()
   }
   isMobileMenu() {
       if ( window.innerWidth > 991) {
@@ -37,4 +48,19 @@ export class SidebarComponent implements OnInit {
       }
       return true;
   };
+  rutas(){
+    let {rol} = JSON.parse(sessionStorage.getItem('usuario'))
+    switch(rol){
+      case "ROLE_ADMIN":
+        this.menu = ROUTES;
+        this.menuItems = ROUTES.filter(menuItem => menuItem);
+      break;
+      case "ROLE_USER":
+        this.menu = ROUTESUSER;
+        this.menuItems = ROUTESUSER.filter(menuItem => menuItem);
+      break;
+    }
+    
+  }
+
 }

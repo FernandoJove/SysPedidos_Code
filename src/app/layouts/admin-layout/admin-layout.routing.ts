@@ -21,3 +21,13 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'users',          component: UsersComponent},
     { path: 'pagos',          component: PagosComponent},
 ];
+export const UserLayoutRoutes: Routes = [
+    { path: '',      component: DashboardComponent },
+    { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'table-list',     component: TableListComponent },
+    { path: 'typography',     component: TypographyComponent },
+    { path: 'carrito',          component: IconsComponent },
+    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'users',          component: UsersComponent},
+    { path: 'pagos',          component: PagosComponent},
+];

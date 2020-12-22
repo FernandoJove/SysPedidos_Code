@@ -2,7 +2,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../sidebar/sidebar.component';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { Router } from '@angular/router';
-import Chart from 'chart.js';
+
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-navbar',
@@ -18,7 +19,7 @@ export class NavbarComponent implements OnInit {
 
     public isCollapsed = true;
 
-    constructor(location: Location,  private element: ElementRef, private router: Router) {
+    constructor(location: Location,  private element: ElementRef, private router: Router,private toastr: ToastrService) {
       this.location = location;
           this.sidebarVisible = false;
     }
@@ -36,6 +37,7 @@ export class NavbarComponent implements OnInit {
          }
      });
     }
+   
 
     collapse(){
       this.isCollapsed = !this.isCollapsed;
