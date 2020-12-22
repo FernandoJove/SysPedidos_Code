@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsuarioService {
-  public url:string ='http://192.168.194.157:2020/';
+  public url:string ='http://localhost:2020/';
   private urlmenu= this.url+'usuario/';
 
   constructor(private http:HttpClient){

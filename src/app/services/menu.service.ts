@@ -11,7 +11,7 @@ import { AuthService } from './auth.service';
 export class MenuService {
   htpHeaders = new HttpHeaders({'Content-Type':'application/json'});
 
-  public url:string ='http://192.168.194.157:2020/';
+  public url:string ='http://localhost:2020/';
   private urlmenu= this.url+'menu/';
   constructor(private http:HttpClient,private authService: AuthService,private router: Router){
 
