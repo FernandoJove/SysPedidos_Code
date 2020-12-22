@@ -10,7 +10,7 @@ import { throwError } from 'rxjs';
 })
 export class EmpresaService {
   htpHeaders = new HttpHeaders({'Content-Type':'application/json'});
-  public url:string ='http://localhost:2020/';
+  public url:string ='http://192.168.194.157:2020/';
   private urlmenu= this.url+'menu/';
   constructor(private http:HttpClient,private router:Router,private authService: AuthService){
 

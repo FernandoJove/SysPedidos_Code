@@ -12,7 +12,7 @@ export class PedidoService {
 
   htpHeaders = new HttpHeaders({'Content-Type':'application/json'});
 
-  public url:string ='http://localhost:2020/';
+  public url:string ='http://192.168.194.157:2020/';
 
   constructor(private http:HttpClient,private router:Router,private authService:AuthService) { }
 
